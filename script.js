@@ -40,10 +40,11 @@ function iniciarSite() {
     setTimeout(() => {
         introBar.style.display = "none";
         menuBar.style.display = "flex";
-        menuBar.classList.add("aparecer");
+        menuBar.classList.add("introAnim");
+        setTimeout(() => {
+            menuBar.classList.remove("introAnim");
+        },1800)
     }, 280);
-
-    menuBar.classList.remove("aparecer");
 }
 
 // Função para abrir as telas
@@ -56,8 +57,8 @@ function abrirTela(tela, texto) { // tela = variável do container da tela, text
         sections.classList.add("aparecer");
         setTimeout(() => {
             sections.classList.remove("aparecer");
-        }, 1280)
-    }, 1890);
+        }, 1980)
+    }, 900);
 
     tela.style.display = "flex";
     titleSection.textContent = texto;
@@ -81,7 +82,7 @@ function fecharTelas() {
         setTimeout(() => {
             menuBar.classList.remove("aparecer");
         }, 1280)
-    }, 1480);
+    }, 900);
 }
 
 // Função para abrir links utilizando botões
